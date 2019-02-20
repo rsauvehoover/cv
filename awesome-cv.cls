@@ -201,10 +201,10 @@
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
-\newcommand*{\entrypositionstyle}[1]{{\fontsize{8pt}{1em}\bodyfont\scshape\color{graytext} #1}}
-\newcommand*{\entrydatestyle}[1]{{\fontsize{8pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
-\newcommand*{\entrylocationstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
-\newcommand*{\descriptionstyle}[1]{{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text} #1}}
+\newcommand*{\entrypositionstyle}[1]{{\fontsize{10pt}{1em}\bodyfont\scshape\color{graytext} #1}}
+\newcommand*{\entrydatestyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{graytext} #1}}
+\newcommand*{\entrylocationstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\slshape\color{awesome} #1}}
+\newcommand*{\descriptionstyle}[1]{{\fontsize{10pt}{1em}\bodyfontlight\upshape\color{text} #1}}
 
 % For elements of subentry
 \newcommand*{\subentrytitlestyle}[1]{{\fontsize{8pt}{1em}\bodyfont\mdseries\color{graytext} #1}}
@@ -529,10 +529,9 @@
     \ifempty{#1#3#4}
       {\entrytitlestyle{#2} \\
         \multicolumn{1}{L{\textwidth}}{\descriptionstyle{#5}}}
-      {\ifempty{#2#3}
-          {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-          {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-            \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+      {\ifempty{#1}
+          {\entrytitlestyle{#2}\quad\textbar\quad\entrypositionstyle{#3}\quad\textbar\quad\entrydatestyle{#4} \\}
+          {\entrytitlestyle{#2}\quad\textbar\quad\entrypositionstyle{#1}\quad\textbar\quad\entrydatestyle{#4}\\}
         \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
   \end{tabular*}%
 }

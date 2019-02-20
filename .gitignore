@@ -267,4 +267,4 @@ TSWLatexianTemp*
 # glossaries
 *.glstex
 
-# End of https://www.gitignore.io/api/latex
+*.zip
