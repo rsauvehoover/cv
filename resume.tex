@@ -23,11 +23,14 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[12pt, a4paper]{awesome-cv}
 
-%allow multicol itemize
+% allow multicol itemize
 \usepackage{multicol}
 
+% disallow hypenation
+\usepackage[none]{hyphenat}
+
 % Configure page margins with geometry
-\geometry{left=1.0cm, top=.8cm, right=1.0cm, bottom=1.0cm}%, footskip=.5cm}
+\geometry{left=1.0cm, top=0cm, right=1.0cm, bottom=1.0cm}%, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -41,10 +44,10 @@
 
 % Colors for text
 % Uncomment if you would like to specify your own color
-% \definecolor{darktext}{HTML}{414141}
-% \definecolor{text}{HTML}{333333}
- \definecolor{graytext}{HTML}{333333}
-% \definecolor{lighttext}{HTML}{999999}
+ %\definecolor{darktext}{HTML}{414141}
+ \definecolor{text}{HTML}{000000}
+ \definecolor{graytext}{HTML}{000000}
+ \definecolor{lighttext}{HTML}{000000}
 
 % Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
@@ -64,7 +67,7 @@
 % \photo[rectangle,edge,right]{profile}
 \name{R. Frederic}{Sauve-Hoover}
 %\position{Software Developer}
-%\address{9723 88 Ave NW}
+\address{9723 88 Ave NW, Edmonton AB, T6E 2R1}
 
 \mobile{+1 (780) 966-4114}
 \email{rsauveho@ualberta.ca}
